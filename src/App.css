@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+}
+
+.container-fluid {
+    background-color: #DEDEDE;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.nav-links {
+    z-index: 10;
+    left: 75%;
+    top: 0;
+    position: absolute;
+}
