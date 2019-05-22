@@ -2,15 +2,49 @@ import React from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Gallery from './Gallery';
+import Portfolio from './Portfolio';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          <p>Bootstrap be here</p>
-          <button class="btn btn-primary">Do the thing</button>
-      </header>
-    </div>
-  );
+    <div className="container">
+      <Router>
+        <div>
+          <Link to="/">Home</Link>&nbsp;&nbsp;&nbsp;
+          <Link to="/about">Me</Link>&nbsp;&nbsp;&nbsp;
+          <Link to="/gallery">Gallery</Link>&nbsp;&nbsp;&nbsp;
+          <Link to="/projects">Projects</Link>&nbsp;&nbsp;&nbsp;
+          <br/>
+          <br/>
+          <br/>
+
+          <Route
+            path="/"
+            exact
+            component={Home}
+          />
+          <Route
+            path="/about"
+            exact
+            component={About}
+          />
+          <Route
+            path="/gallery"
+            exact
+            component={Gallery}
+          />
+          <Route
+            path="/projects"
+            exact
+            component={Portfolio}
+          />
+        </div>
+      </Router>
+      {/*<h1>Where is the Home Page?</h1>*/}
+    </div>);
 }
 
 export default App;
