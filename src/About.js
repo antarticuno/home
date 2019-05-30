@@ -1,5 +1,5 @@
 import React from 'react';
-import face from './me.JPG';
+import face from './img/me.jpg';
 import fb from './ionicons.designerpack/logo-facebook.svg';
 import insta from './ionicons.designerpack/logo-instagram.svg';
 import linked from './ionicons.designerpack/logo-linkedin.svg';
@@ -8,16 +8,22 @@ import github from './ionicons.designerpack/logo-github.svg';
 const About = ({history}) =>
   <div id="about">
     <div>
-      <div class="bio">
+      <div className="bio">
         <p><img src={face} alt="my-face"/></p>
         <h3>
-          <a href=""><img className="social-img" src={fb} alt="fb" /></a>&nbsp;
-          <a href=""><img className="social-img"  src={insta} /></a>&nbsp;
+          <a href="https://www.facebook.com/brendan.yang.754"><img className="social-img"
+                                                                   src={fb}
+                                                                   alt="fb"/></a>&nbsp;
+          <a href="https://www.instagram.com/antarticuno/"><img className="social-img"
+                                                                src={insta}/></a>&nbsp;
           Brendan Yang&nbsp;
-          <a href=""><img className="social-img"  src={linked} /></a>&nbsp;
-          <a href=""><img className="social-img"  src={github} /></a>
+          <a href="https://www.linkedin.com/in/yangbrendan"><img className="social-img"
+                                                                 src={linked}/></a>&nbsp;
+          <a href="https://github.com/antarticuno"><img className="social-img"
+                                                        src={github}/></a>
         </h3>
-        <p><span>Hi!</span>I am a recent graduate of Northeastern University, from which I
+        <p><span>Hi!</span> I am a recent graduate of Northeastern University, from which
+          I
           earned a
           combined degree in Biology and Computer Science. During my time at Northeastern
           I

@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle&display=swap');
+
 html, body {
     height: 100%;
+    width: 100%;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.1em;
+}
+
+h1 {
+    padding: 20px;
+}
+
+a {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 p {
@@ -14,13 +39,14 @@ p {
 }
 
 #about {
-    background: url('northeastern.jpeg') no-repeat fixed;
+    background: url('img/northeastern.jpeg') no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
 #about p>img {
@@ -28,39 +54,64 @@ p {
     display: block;
     margin: auto;
     width: 200px;
-    height: 200px;
 }
 
 .bio h3 {
-    color: #eee;
+    color: #fff;
     text-align: center;
 }
 
 #about .bio {
-    background: rgba(32, 32, 32, 0.8);
+    background: rgba(32, 32, 32, 0.8) fixed;
+    background-size: cover;
     padding: 30px;
     margin: auto;
     width: 60%;
-    height: 100vh;
+    min-height: 100%;
 }
 
 #about p {
     margin: auto;
     width: 100%;
     text-align: justify;
-    color: #eee;
+    color: #fff;
+}
+
+#gallery {
+    overflow-x: hidden;
+}
+
+#gallery img {
+    max-width: 400px;
 }
 
 .container-fluid {
-    background-color: #DEDEDE;
+    background-color: #FFF;
     width: 100%;
     min-height: 100vh;
     height: 100%;
+    padding: 0px;
 }
+
 
 .nav-links {
     z-index: 10;
     left: 75%;
     top: 0;
     position: absolute;
+    background: rgba(32, 32, 32, 0.9);
+    padding: 15px;
+    border-radius: 10px;
 }
+
+.quote {
+    font-style: italic;
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-size: .8em;
+    text-align: center;
+}
+
+.art {
+    margin-right: 30px;
+}
+

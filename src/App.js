@@ -7,20 +7,17 @@ import Home from './Home';
 import About from './About';
 import Gallery from './Gallery';
 import Portfolio from './Portfolio';
+import Art from './Art';
 
 function App() {
   return (
     <div className="container-fluid" id="root">
       <Router>
-        <div>
           <div className="nav-links">
-            <Link to="/" className="btn btn-primary">Home</Link>&nbsp;&nbsp;&nbsp;
+            <Link to="/" className="btn btn-outline-secondary">Home</Link>&nbsp;&nbsp;&nbsp;
             <Link to="/about">Me</Link>&nbsp;&nbsp;&nbsp;
             <Link to="/gallery">Gallery</Link>&nbsp;&nbsp;&nbsp;
             <Link to="/projects">Projects</Link>&nbsp;&nbsp;&nbsp;
-            <br/>
-            <br/>
-            <br/>
           </div>
 
           <Route
@@ -43,8 +40,8 @@ function App() {
             exact
             component={Portfolio}
           />
-        </div>
       </Router>
+      <Art />
       {/*<h1>Where is the Home Page?</h1>*/}
     </div>);
 }
