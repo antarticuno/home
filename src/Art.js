@@ -48,6 +48,7 @@ class Art extends Component {
                 <li key={art.id} align="start">
                   <div>
                     <p>{art.title}</p>
+                    <p><img src={art.img_url} alt={art.title} /></p>
                     <p>{art.desc}</p>
                   </div>
                 </li>
