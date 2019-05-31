@@ -7,12 +7,31 @@ html, body {
     font-size: 1.1em;
 }
 
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: auto;
+}
+
 h1 {
     padding: 20px;
 }
 
+h3 {
+    border-bottom: #000 solid 1px;
+    padding: 0 5px 5px;
+}
+
+h5 {
+    text-align: center;
+    padding: 10px 0px;
+}
+
 a {
     color: white;
+    cursor: pointer;
 }
 
 a:active {
@@ -28,7 +47,7 @@ a:hover {
 }
 
 p {
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 .social-img {
@@ -82,8 +101,10 @@ p {
 }
 
 #gallery img {
-    max-width: 400px;
+    display: block;
+    width: 100%;
 }
+
 
 .container-fluid {
     background-color: #FFF;
@@ -97,21 +118,42 @@ p {
 .nav-links {
     z-index: 10;
     left: 75%;
-    top: 0;
-    position: absolute;
+    top: -10px;
     background: rgba(32, 32, 32, 0.9);
-    padding: 15px;
+    padding: 20px 15px 15px;
     border-radius: 10px;
+    position: fixed;
 }
 
 .quote {
     font-style: italic;
-    font-family: "Hiragino Kaku Gothic Pro";
-    font-size: .8em;
+    font-family: Ubuntu;
+    font-size: 1.4em;
+    background-color: #eee;
     text-align: center;
+    padding: 30px;
 }
 
 .art {
     margin-right: 30px;
 }
+
+.middle {
+    display: flex;
+    display: -webkit-flex;
+    height: 200px;
+    width: 50%;
+    margin: auto;
+}
+
+.middle p {
+    margin: auto; /* Important */
+    text-align: justify;
+    padding: 15px 40px 15px 15px;
+}
+
+.hidden {
+    display: none;
+}
+
 

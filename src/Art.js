@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { fetchJSON } from "./utils/communication";
+import {fetchJSON} from "./utils/communication";
 
 class Art extends Component {
   constructor(props) {
@@ -13,8 +13,8 @@ class Art extends Component {
   }
 
   async componentDidMount() {
-    await fetchJSON("/categories/"+this.state.category)
-      //.then(response => response.json())
+    await fetchJSON("/categories/" + this.state.category)
+    //.then(response => response.json())
       .then(
         // handle the result
         (result) => {
@@ -42,19 +42,20 @@ class Art extends Component {
     } else {
       return (
         <div>
-          <ol>
-            {
-              arts.map(art => (
-                <li key={art.id} align="start">
-                  <div>
-                    <p>{art.title}</p>
-                    <p><img src={art.img_url} alt={art.title} /></p>
-                    <p>{art.desc}</p>
+          {
+            arts.map(art => (
+              <div key={art.id} align="start">
+                <div>
+                  <h5>{art.title}</h5>
+                  <div className="row">
+                    <div className="col"><img src={art.img_url} alt={art.title}/></div>
+                    <div className="col middle"><p>{art.desc}</p></div>
                   </div>
-                </li>
-              ))
-            }
-          </ol>
+                </div>
+                <br />
+              </div>
+            ))
+          }
         </div>
       );
     }

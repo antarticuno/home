@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { fetchJSON } from "./utils/communication";
+import {fetchJSON} from "./utils/communication";
 import Art from './Art';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
@@ -43,19 +43,28 @@ class Category extends Component {
     } else {
       return (
         <div>
-          <ol>
-            {
-              categories.map(category => (
-                <li key={category.id} align="start">
-                  <div>
-                    <p><Link className="btn btn-primary">{category.name}</Link></p>
-                    <p>{category.desc}</p>
-                    <Art category={category.id} />
-                  </div>
-                </li>
-              ))
-            }
-          </ol>
+          {
+            categories.map(category => (
+              <div key={category.id} align="start">
+                <div>
+                  <p>
+                    <a onClick={() => {
+                      let art = document.getElementById(
+                        "art-" + category.id);
+                      art.classList.toggle("hidden");
+                    }}>
+                      <h3>
+                        {category.name}
+                      </h3>
+                    </a>
+                  </p>
+                  <p>{category.desc}</p>
+                  <div className="hidden" id={"art-" + category.id}><Art
+                    category={category.id}/></div>
+                </div>
+              </div>
+            ))
+          }
         </div>
       );
     }
