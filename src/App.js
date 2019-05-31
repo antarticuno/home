@@ -7,7 +7,6 @@ import Home from './Home';
 import About from './About';
 import Gallery from './Gallery';
 import Portfolio from './Portfolio';
-import Art from './Art';
 
 function App() {
   return (
@@ -41,7 +40,6 @@ function App() {
             component={Portfolio}
           />
       </Router>
-      <Art />
       {/*<h1>Where is the Home Page?</h1>*/}
     </div>);
 }

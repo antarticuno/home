@@ -7,19 +7,19 @@ class Art extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      users: [],
+      arts: [],
     };
   }
 
   async componentDidMount() {
-    await fetchJSON("/users")
+    await fetchJSON("/art")
       //.then(response => response.json())
       .then(
         // handle the result
         (result) => {
           this.setState({
             isLoaded: true,
-            users: result
+            arts: result
           });
         },
         // Handle error
@@ -33,7 +33,7 @@ class Art extends Component {
   }
 
   render() {
-    const {error, isLoaded, users} = this.state;
+    const {error, isLoaded, arts} = this.state;
     if (error) {
       return <div>{error.toString()}</div>
     } else if (!isLoaded) {
@@ -43,11 +43,11 @@ class Art extends Component {
         <div>
           <ol>
             {
-              users.map(user => (
-                <li key={user.id} align="start">
+              arts.map(art => (
+                <li key={art.id} align="start">
                   <div>
-                    <p>{user.username}</p>
-                    <p>{user.password}</p>
+                    <p>{art.title}</p>
+                    <p>{art.desc}</p>
                   </div>
                 </li>
               ))
