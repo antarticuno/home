@@ -1,5 +1,5 @@
 import React from 'react';
-import Art from './Art';
+import Category from './Category';
 
 const Gallery = ({history}) =>
   <div id="gallery">
@@ -12,7 +12,7 @@ const Gallery = ({history}) =>
         paintings. Feel free to contact me at <i>antarticuno@gmail.com</i> if you have any
         questions about potential commissions, design work, etc.</p>
     </div>
-    <Art />
+    <Category />
   </div>;
 
 function Card(props) {

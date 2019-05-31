@@ -5,6 +5,7 @@ class Art extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      category: props.category,
       error: null,
       isLoaded: false,
       arts: [],
@@ -12,7 +13,7 @@ class Art extends Component {
   }
 
   async componentDidMount() {
-    await fetchJSON("/art")
+    await fetchJSON("/categories/"+this.state.category)
       //.then(response => response.json())
       .then(
         // handle the result
