@@ -59,7 +59,8 @@ class Category extends Component {
                     </a>
                   </p>
                   <p>{category.desc}</p>
-                  <div className="hidden" id={"art-" + category.id}><Art
+                  <div className="hidden" id={"art-" + category.id}>
+                    <Art
                     category={category.id}/></div>
                 </div>
               </div>
