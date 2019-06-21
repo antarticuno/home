@@ -61,13 +61,25 @@ class Home extends React.Component {
     if (roundDegree > 270 && roundDegree < 360) return 4;
   }
 
-  async componentDidMount() {
-    this.setSize();
+  componentWillMount() {
+    this.updateDimensions();
+  }
 
+  componentDidMount() {
+    this.setSize();
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize");
   }
 
   setSize() {
     this.setState(_.assign({}, this.state, {width: window.innerWidth, height: window.innerHeight, length: this.state.width*1.5}));
+  }
+
+  updateDimensions() {
+    this.setState(_.assign({}, this.state, {width: window.innerWidth, height: window.innerHeight}));
   }
 
   getRandomColor() {
@@ -80,13 +92,6 @@ class Home extends React.Component {
   }
 
   render() {
-    let body = document.getElementsByTagName("body");
-    body.onresize = function(){alert("resized")};
-    let root = document.getElementById("root");
-
-
-
-
     let width = this.state.width;
     let height = this.state.height;
     let length = width* 1.3;
@@ -112,7 +117,9 @@ class Home extends React.Component {
     let points11 = [this.state.width, 0].concat(getXYPoint(this.state.points.points11[0])).concat(getXYPoint(this.state.points.points11[1]));
     let points12 = [this.state.width, 0].concat(getXYPoint(this.state.points.points12[0])).concat(getXYPoint(this.state.points.points12[1]));
 
-    let canvas = <div id="container">
+    //sconsole.log(points12);
+
+    let canvas =
       <Stage width={width} height={height} id="stage">
         <Layer>
           <Line points={points1} closed fill={color} />
@@ -128,12 +135,13 @@ class Home extends React.Component {
           <Line points={points11} closed fill={color} />
           <Line points={points12} closed fill={color} />
         </Layer>
-      </Stage>
+      </Stage>;
+
+
+    return <div id="container">
+      {canvas}
       <Welcome />
     </div>;
-
-
-    return canvas;
   }
 }
 
@@ -151,11 +159,10 @@ class Welcome extends React.Component {
 
   render() {
     return <div id="welcome">
-      <div class="icon"></div>
       <h1>
-        <span class="left">Welcome</span>
+        <span className="left">Welcome</span>
         <Link to={this.randomPage()} title="Go to a random page!"><img src={antartikun} alt="explore antarticuno"/></Link>
-        <span class="right">Home</span>
+        <span className="right">Home</span>
       </h1>
     </div>;
   }

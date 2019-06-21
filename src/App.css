@@ -69,6 +69,8 @@ p {
 #welcome h1 img {
     border-radius: 200px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     width: 200px;
     position: absolute;
     top: -50%;
@@ -89,7 +91,9 @@ p {
 #welcome h1 img:hover {
     width: 210px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-    transition: all .1s linear;
+
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: all .4s ease-in-out;
     top: calc(-50% - 5px);
     top: -moz-calc(-50% - 5px);
     top: -webkit-calc(-50% - 5px);
@@ -99,6 +103,8 @@ p {
     left: -webkit-calc(50% - 105px);
     /* Standard */
     left: calc(50% - 105px);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 #welcome h1 {
@@ -186,7 +192,8 @@ p {
 
 .nav-links {
     z-index: 10;
-    left: 75%;
+    float: right;
+    right: 0;
     top: -10px;
     background: rgba(32, 32, 32, 0.9);
     padding: 20px 15px 15px;
