@@ -32,8 +32,8 @@ class Home extends React.Component {
       points11: [300, 315],
       points12: [330, 345]},
     };
-
-    window.setInterval(this.tick.bind(this), 100);
+    this.interval =
+      window.setInterval(this.tick.bind(this), 100);
   }
 
   tick() {
@@ -51,27 +51,18 @@ class Home extends React.Component {
     this.setState(_.assign({}, this.state, {tick: this.state.tick+1}));
   }
 
-
-
-  quad(degree) {
-    let roundDegree = degree % 360;
-    if (roundDegree >= 0 && roundDegree <= 90) return 1;
-    if (roundDegree > 90 && roundDegree <= 180) return 2;
-    if (roundDegree > 180 && roundDegree <= 270) return 3;
-    if (roundDegree > 270 && roundDegree < 360) return 4;
-  }
-
   componentWillMount() {
-    this.updateDimensions();
+    this.setSize();
   }
 
   componentDidMount() {
     this.setSize();
-    window.addEventListener("resize", this.updateDimensions.bind(this));
+    window.addEventListener("resize", this.setSize.bind(this));
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions.bind(this));
+    window.clearInterval(this.interval);
+    window.removeEventListener("resize", this.setSize.bind(this));
   }
 
   setSize() {
@@ -152,8 +143,8 @@ class Welcome extends React.Component {
   }
 
   randomPage() {
-    let pages = ["/about", "/gallery", "/projects"];
-    let random = Math.floor(Math.random() * 3);
+    let pages = ["/about", "/gallery", "https://github.com/antarticuno"];
+    let random = Math.floor(Math.random() * 2);
     return pages[random];
   }
 
