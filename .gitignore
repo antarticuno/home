@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 /.idea
-/src/ionicons.designerpack
-/src/img
+#/src/ionicons.designerpack
+#/src/img
 
 # testing
 /coverage
