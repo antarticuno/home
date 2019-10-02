@@ -6,7 +6,6 @@ import {Stage, Layer, Circle, Line, Image} from 'react-konva';
 import useImage from 'use-image';
 import {fetchJSON} from "./utils/communication";
 import _ from 'lodash';
-import skyline from './img/skyline.png';
 import antartikun from './img/antartikun.png';
 
 class Home extends React.Component {
