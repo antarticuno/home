@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /.idea
+.env
 #/src/ionicons.designerpack
 #/src/img
 
