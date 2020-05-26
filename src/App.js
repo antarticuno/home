@@ -2,7 +2,7 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Gallery from './Gallery';
@@ -13,10 +13,10 @@ function App() {
     <div className="container-fluid" id="root">
       <Router>
           <div className="nav-links" id="nav-links">
-            <Link to="/" className="btn btn-outline-secondary">Home</Link>&nbsp;&nbsp;&nbsp;
-            <Link to="/about">Me</Link>&nbsp;&nbsp;&nbsp;
-            <Link to="/gallery">Gallery</Link>&nbsp;&nbsp;&nbsp;
-            {/*<Link to="/projects">Projects</Link>&nbsp;&nbsp;&nbsp;*/}
+            <NavLink to="/" className="btn btn-outline-secondary">Home</NavLink>&nbsp;&nbsp;&nbsp;
+            <NavLink to="/about">Me</NavLink>&nbsp;&nbsp;&nbsp;
+            <NavLink to="/gallery">Gallery</NavLink>&nbsp;&nbsp;&nbsp;
+            {/*<NavLink to="/projects">Projects</NavLink>&nbsp;&nbsp;&nbsp;*/}
             <a href="https://github.com/antarticuno">Projects</a>
           </div>
 

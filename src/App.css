@@ -80,7 +80,7 @@ ul li {
     transition: all 0.4s ease-in-out;
     width: 200px;
     position: absolute;
-    top: -50%;
+    top: -40%;
     /* Firefox */
     left: -moz-calc(50% - 100px);
     /* WebKit */
@@ -101,9 +101,9 @@ ul li {
 
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: all .4s ease-in-out;
-    top: calc(-50% - 5px);
-    top: -moz-calc(-50% - 5px);
-    top: -webkit-calc(-50% - 5px);
+    top: calc(-40% - 5px);
+    top: -moz-calc(-40% - 5px);
+    top: -webkit-calc(-40% - 5px);
     /* Firefox */
     left: -moz-calc(50% - 105px);
     /* WebKit */
@@ -117,6 +117,8 @@ ul li {
 #welcome h1 {
     position: absolute;
     top: 40%;
+    height: 20%;
+    min-height: 120px;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     text-align: center;
@@ -127,14 +129,22 @@ ul li {
 
 #welcome span.left {
     display: inline-block;
-    float: left;
-    margin-left: 20%;
+    position: absolute;
+    top: 25%;
+    right: calc(50% + 130px);
+    right: -moz-calc(50% + 130px);
+    right: -webkit-calc(50% + 130px);
+    vertical-align: middle;
 }
 
 #welcome span.right {
     display: inline-block;
-    float: right;
-    margin-right: 25%;
+    position: absolute;
+    top: 25%;
+    left: calc(50% + 130px);
+    left: -moz-calc(50% + 130px);
+    left: -webkit-calc(50% + 130px);
+    vertical-align: middle;
 }
 
 
@@ -187,9 +197,18 @@ ul li {
     width: 100%;
 }
 
+#gallery h1 {
+    font-size: 3em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+}
+
 
 .container-fluid {
-    background-color: #FFF;
+    /*background-image: url('img/home_bg.jpg');*/
+    /*background-position: left top;*/
+    /*background-repeat: no-repeat;*/
+    background-color: #000000;
     width: 100%;
     /*min-height: 100vh;*/
     height: 100%;
@@ -375,6 +394,8 @@ ul li {
 }
 
 #categories-content {
+    padding-top: 30px;
+    padding-left: 20px;
     width: 75%;
     float: left;
     text-align: justify;

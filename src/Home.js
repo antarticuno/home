@@ -16,7 +16,7 @@ class Home extends React.Component {
       height: null,
       length: null,
       tick: 0,
-      color: {r: 0, g: 0, b: 0},
+      color: '#FFFFFF',
       points: {
         points1: [0, 15],
       points2: [30, 45],
@@ -141,18 +141,12 @@ class Welcome extends React.Component {
     this.state = {};
   }
 
-  randomPage() {
-    let pages = ["/about", "/gallery", "https://github.com/antarticuno"];
-    let random = Math.floor(Math.random() * 2);
-    return pages[random];
-  }
-
   render() {
     return <div id="welcome">
       <h1>
-        <span className="left">Welcome</span>
-        <Link to={this.randomPage()} title="Go to a random page!"><img src={antartikun} alt="explore antarticuno"/></Link>
-        <span className="right">Home</span>
+        <span className="left"><Link to="/about">Brendan Yang</Link></span>
+        <a href="https://github.com/antarticuno" target="_blank"><img src={antartikun} alt="explore antarticuno"/></a>
+        <span className="right"><a href="https://instagram.com/antarticuno" target="_blank">@antarticuno</a></span>
       </h1>
     </div>;
   }
