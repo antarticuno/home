@@ -206,9 +206,10 @@ ul li {
 
 
 .container-fluid {
-    /*background-image: url('img/home_bg.jpg');*/
-    /*background-position: left top;*/
-    /*background-repeat: no-repeat;*/
+    background-image: url('img/home_bg.jpg');
+    background-position: 15% bottom;
+    background-repeat: no-repeat;
+    background-size: 900px;
     background-color: #000000;
     width: 100%;
     /*min-height: 100vh;*/
