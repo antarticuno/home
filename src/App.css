@@ -74,19 +74,19 @@ ul li {
 }
 
 #welcome h1 img {
-    border-radius: 200px;
+    border-radius: 50%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    width: 200px;
+    width: 20%;
     position: absolute;
-    top: -40%;
+    top: calc(-10vh);
     /* Firefox */
-    left: -moz-calc(50% - 100px);
+    left: -moz-calc(40%);
     /* WebKit */
-    left: -webkit-calc(50% - 100px);
+    left: -webkit-calc(40%);
     /* Standard */
-    left: calc(50% - 100px);
+    left: calc(40%);
     user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -96,20 +96,20 @@ ul li {
 }
 
 #welcome h1 img:hover {
-    width: 210px;
+    width: calc(20% + 10px);
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: all .4s ease-in-out;
-    top: calc(-40% - 5px);
-    top: -moz-calc(-40% - 5px);
-    top: -webkit-calc(-40% - 5px);
+    top: calc(-10vh - 5px);
+    top: -moz-calc(-10vh - 5px);
+    top: -webkit-calc(-10vh - 5px);
     /* Firefox */
-    left: -moz-calc(50% - 105px);
+    left: -moz-calc(40% - 5px);
     /* WebKit */
-    left: -webkit-calc(50% - 105px);
+    left: -webkit-calc(40% - 5px);
     /* Standard */
-    left: calc(50% - 105px);
+    left: calc(40% - 5px);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
@@ -130,20 +130,20 @@ ul li {
 #welcome span.left {
     display: inline-block;
     position: absolute;
-    top: 25%;
-    right: calc(50% + 130px);
-    right: -moz-calc(50% + 130px);
-    right: -webkit-calc(50% + 130px);
+    top: calc(50% - 25px);
+    right: calc(62%);
+    right: -moz-calc(62%);
+    right: -webkit-calc(62%);
     vertical-align: middle;
 }
 
 #welcome span.right {
     display: inline-block;
     position: absolute;
-    top: 25%;
-    left: calc(50% + 130px);
-    left: -moz-calc(50% + 130px);
-    left: -webkit-calc(50% + 130px);
+    top: calc(50% - 25px);
+    left: calc(62%);
+    left: -moz-calc(62%);
+    left: -webkit-calc(62%);
     vertical-align: middle;
 }
 
@@ -209,7 +209,7 @@ ul li {
     background-image: url('img/home_bg.jpg');
     background-position: 15% bottom;
     background-repeat: no-repeat;
-    background-size: 900px;
+    background-size: cover;
     background-color: #000000;
     width: 100%;
     /*min-height: 100vh;*/
