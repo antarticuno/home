@@ -1,10 +1,7 @@
 import React from 'react';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Kinetic from 'kinetic';
 import {Stage, Layer, Circle, Line, Image} from 'react-konva';
-import useImage from 'use-image';
-import {fetchJSON} from "./utils/communication";
 import _ from 'lodash';
 import antartikun from './img/antartikun.png';
 
@@ -43,10 +40,6 @@ class Home extends React.Component {
       this.setState(_.assign({}, this.state.points, {degrees}));
     }
     let color = this.state.color;
-/*    if (this.state.tick % 1 == 0) {
-      color = this.getRandomColor();
-      this.setState(_.assign({}, this.state, {color: color}));
-    }*/
     this.setState(_.assign({}, this.state, {tick: this.state.tick+1}));
   }
 
@@ -68,23 +61,11 @@ class Home extends React.Component {
     this.setState(_.assign({}, this.state, {width: window.innerWidth, height: window.innerHeight, length: this.state.width*1.5}));
   }
 
-  updateDimensions() {
-    this.setState(_.assign({}, this.state, {width: window.innerWidth, height: window.innerHeight}));
-  }
-
-  getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
   render() {
     let width = this.state.width;
     let height = this.state.height;
-    let length = width* 1.3;
+
+    let length = Math.max(height, width) * 1.5;
     let color = this.state.color;
 
     function getXYPoint(degree) {
@@ -142,11 +123,11 @@ class Welcome extends React.Component {
   }
 
   render() {
-    return <div id="welcome">
+    return <div id="welcome" className="overlay">
       <h1>
-        <span className="left"><Link to="/about">Brendan Yang</Link></span>
-        <a href="https://github.com/antarticuno" target="_blank"><img src={antartikun} alt="explore antarticuno"/></a>
-        <span className="right"><a href="https://instagram.com/antarticuno" target="_blank">@antarticuno</a></span>
+        <p className="left"><Link to="/about">Brendan Yang</Link></p>
+        <a href="https://github.com/antarticuno" target="_blank" rel="noopener noreferrer"><img src={antartikun} alt="explore antarticuno"/></a>
+        <p className="right"><a href="https://instagram.com/antarticuno" target="_blank" rel="noopener noreferrer">@antarticuno</a></p>
       </h1>
     </div>;
   }
