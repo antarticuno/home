@@ -3,9 +3,9 @@ import Category from './Category';
 
 const Gallery = ({history}) =>
   <div id="gallery">
-      <p className="wood-bg">
+      <section className="gallery-bg">
           <h1>Gallery</h1>
-      </p>
+      </section>
     <Category />
   </div>;
 

@@ -96,8 +96,8 @@ class Art extends Component {
                   <p>{art.desc}</p>
                 </div>
                 <div id={"myModal" + art.id} className="modal">
-                  <img className="modal-content" id={"img" + art.id}/>
-                  <div className="caption" id={"caption" + art.id}></div>
+                  <img className="modal-content" id={"img" + art.id} alt={art.title}/>
+                  <div className="caption" id={"caption" + art.id}>{art.desc}</div>
                   <span id={"close" + art.id} className="close">&times;</span>
                 </div>
                 <br/>
