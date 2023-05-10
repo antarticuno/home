@@ -21,6 +21,7 @@ class Category extends Component {
   }
 
   async componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
     await fetchJSON("/categories")
     //.then(response => response.json())
       .then(
@@ -39,6 +40,27 @@ class Category extends Component {
           })
         },
       )
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
+  }
+
+  handleScroll(e) {
+    let parent = document.getElementById('parent');
+    if (parent !== null) {
+      let navBar = document.getElementById('categories-nav');
+      let globalNavBar = document.getElementById('nav-links');
+      let topNavSize = globalNavBar.scrollHeight + globalNavBar.offsetTop - 1;
+      let scrollTo = parent.offsetTop - topNavSize;
+      if (window.pageYOffset > scrollTo) {
+        navBar.classList.add("fixed");
+        navBar.setAttribute("style", "top:" + topNavSize + "px");
+      } else {
+        navBar.classList.remove("fixed");
+        navBar.removeAttribute("style");
+      }
+    }
   }
 
 

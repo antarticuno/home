@@ -14,16 +14,16 @@ const About = ({history}) =>
                                                                  src={fb}
                                                                  alt="fb"/></a>
         <a href="https://www.instagram.com/antarticuno/"><img className="social-img"
-                                                              src={insta}/></a>
+                                                              src={insta} alt="insta"/></a>
         Brendan Yang
         <a href="https://www.linkedin.com/in/yangbrendan"><img className="social-img"
-                                                               src={linked}/></a>
+                                                               src={linked} alt="linkedin"/></a>
         <a href="https://github.com/antarticuno"><img className="social-img"
-                                                      src={github}/></a>
+                                                      src={github} alt="git"/></a>
       </h3>
       <div className="description">
-        <p><span>Welcome to my portfolio!</span> I'm an artist and software engineer currently based in the Boston area.
-          Recently, I've spent the past few years developing software for the clinical trial space. It has been incredibly
+        <p><span>Welcome to my portfolio!</span> I'm an artist and software engineer currently based in the Los Angeles area (previously Boston).
+          Recently, I've spent the past few years developing software for the clinical trial industry. It has been incredibly
           rewarding, especially because of its importance in advancing global health.
         </p>
         <p>Outside of work, I enjoy drawing and painting, and just generally experimenting with a variety of mediums.
