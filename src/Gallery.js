@@ -13,39 +13,39 @@ const Gallery = () =>
           <Art img={"antarticuno-playmat.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"brachio.PNG"} />
-          <Art img={"spino.PNG"} />
+          <Art img={"brachio.png"} />
+          <Art img={"spino.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"pteros.PNG"} />
-          <Art img={"trexy.PNG"} />
+          <Art img={"pteros.png"} />
+          <Art img={"trexy.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"dinovember_w1.PNG"} />
+          <Art img={"dinovember_w1.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"dinovember_w1 2.PNG"} />
-          <Art img={"dinovember_w1 3.PNG"} />
+          <Art img={"dinovember_w1 2.png"} />
+          <Art img={"dinovember_w1 3.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"dinovemberw2.PNG"} />
-          <Art img={"dinovemberw2 2.PNG"} />
+          <Art img={"dinovemberw2.png"} />
+          <Art img={"dinovemberw2 2.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"dinovemberw2 3.PNG"} />
-          <Art img={"dinovemberw2 4.PNG"} />
+          <Art img={"dinovemberw2 3.png"} />
+          <Art img={"dinovemberw2 4.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"dinovemberw4.PNG"} />
-          <Art img={"dinovemberw4 2.PNG"} />
+          <Art img={"dinovemberw4.png"} />
+          <Art img={"dinovemberw4 2.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"lorraine.PNG"} />
-          <Art img={"bethany.PNG"} />
+          <Art img={"lorraine.png"} />
+          <Art img={"bethany.png"} />
         </div>
         <div className="card-deck">
-          <Art img={"emily.PNG"} />
-          <Art img={"man.PNG"} />
+          <Art img={"emily.png"} />
+          <Art img={"man.png"} />
         </div>
       </div>
     </div>
